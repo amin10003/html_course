@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>La Bella Pizza</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: #333;
+      background-color: #fffdfa;
+      line-height: 1.6;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 1rem;
+    }
+    header {
+      background-color: #b3001b;
+      color: #fff;
+      padding: 1rem 0;
+    }
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    header nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    header nav a:hover {
+      color: #ffd700;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1601924638867-3fd3f1f71d96?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 8rem 1rem;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .hero .container {
+      position: relative;
+      z-index: 1;
+    }
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      background-color: #ffd700;
+      color: #b3001b;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 30px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #e6c200;
+      transform: translateY(-3px);
+    }
+    .menu {
+      padding: 4rem 0;
+      text-align: center;
+    }
+    .menu h2 {
+      font-size: 2rem;
+      color: #b3001b;
+      margin-bottom: 2rem;
+    }
+    .menu-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    .menu-item {
+      background-color: #fff8f0;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      flex: 1 1 250px;
+      max-width: 300px;
+      transition: transform 0.3s ease;
+    }
+    .menu-item:hover {
+      transform: translateY(-5px);
+    }
+    .menu-item h3 {
+      color: #b3001b;
+      margin-bottom: 0.5rem;
+    }
+    .about {
+      padding: 4rem 0;
+      background-color: #fffdfa;
+      text-align: center;
+    }
+    .about h2 {
+      font-size: 2rem;
+      color: #b3001b;
+      margin-bottom: 1rem;
+    }
+    .contact {
+      background-color: #b3001b;
+      color: #fff;
+      padding: 4rem 0;
+      text-align: center;
+    }
+    .contact h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .contact .btn {
+      background-color: #fff;
+      color: #b3001b;
+    }
+    .contact .btn:hover {
+      background-color: #ffd700;
+    }
+    footer {
+      background-color: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>La Bella Pizza</h1>
+      <nav>
+        <ul>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="container">
+      <h2>Authentic Wood-Fired Pizza</h2>
+      <p>Handcrafted with the finest ingredients.</p>
+      <a href="#menu" class="btn">Explore Our Menu</a>
+    </div>
+  </section>
+  <section id="menu" class="menu">
+    <div class="container">
+      <h2>Our Signature Pizzas</h2>
+      <div class="menu-grid">
+        <div class="menu-item">
+          <h3>Margherita</h3>
+          <p>Fresh mozzarella, tomatoes, and basil.</p>
+        </div>
+        <div class="menu-item">
+          <h3>Pepperoni Classic</h3>
+          <p>Pepperoni, mozzarella, and house-made tomato sauce.</p>
+        </div>
+        <div class="menu-item">
+          <h3>Vegetarian Delight</h3>
+          <p>Bell peppers, onions, mushrooms, olives, and cheese.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Us</h2>
+      <p>La Bella Pizza is dedicated to bringing you the authentic flavors of Italy, using traditional recipes and the freshest local produce. Every pizza is handcrafted and wood-fired to perfection.</p>
+    </div>
+  </section>
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Have questions or want to place an order? Get in touch today!</p>
+      <a href="mailto:info@labellapizza.com" class="btn">Email Us</a>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 La Bella Pizza. Crafted with ❤️.</p>
+    </div>
+  </footer>
+</body>
+</html>
